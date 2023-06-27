@@ -1,5 +1,5 @@
 phone_book = []
-path = 'phones.txt'
+path = 'phns.txt'
 
 
 def open_file():
@@ -36,3 +36,6 @@ def change(index: int, new: dict[str, str]):
     for key, field in new.items():
         if field != '':
             phone_book[index - 1][key] = field
+
+def delete(index):
+    phone_book.pop(index)  
